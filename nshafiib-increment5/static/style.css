@@ -1,0 +1,253 @@
+* {
+  padding: 5px;
+  margin: 5px;
+  background: #000000;
+  color:  #f5f5f7;
+  font-family: Quicksand, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  line-height: 1.5;
+}
+
+#logo {
+  width: 18%;
+  display: block;
+}
+
+nav a {
+  text-decoration: none;
+  color: #C4B5FD;
+  font-family: Quicksand, sans-serif;
+  font-weight: 400;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  font-size: 15px;
+}
+
+nav a:hover {
+  border-color: #7C3AED;
+  }
+
+.active {
+  color: #EC4899;    
+}
+
+h1 {
+  font-family: Michroma, sans-serif;
+  color: #3B82F6;
+  font-weight: bolder;
+  font-size: 36px;
+}
+
+h2 {
+  font-family: Rajdhani, sans-serif;
+  color: #EC4899;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+h3 {
+  font-family: Rajdhani, sans-serif;
+  color: #EC4899;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+p {
+  font-family: Quicksand, sans-serif;
+  color: #f5f5f7;
+  font-size: 16px;
+}
+
+ul {
+  font-family: Quicksand, sans-serif;
+  color: #f5f5f7;
+  font-size: 16px;
+}
+
+li {
+  font-family: Quicksand, sans-serif;
+  color: #f5f5f7;
+  font-size: 16px;
+}
+
+.cta {
+  background-color: #3B82F6;
+  color: #f5f5f7;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-family: Quicksand, sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cta:hover {
+  background-color: #7C3AED;
+}
+
+footer {
+  border-top: 1px solid rgba(196, 181, 253, 0.3);
+  padding: 18px 16px;
+  text-align: center;
+  color: #f5f5f7;
+}
+ 
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: fit-content;
+}
+ 
+tr:nth-child(even) {
+  background-color: #f5f5f7;
+}
+
+form * {
+  margin: auto;
+  text-align: center;
+}
+
+.container {
+  display: grid; /* Turns this div into a CSS Grid layout */
+  grid-template-areas:   /* Defines the layout structure */
+    'header header'
+    'nav_bar nav_bar'
+    'main main-img'
+    'footer footer';
+}
+
+/* Places each element into the correct area of the grid */
+.header {
+   grid-area: header; 
+}
+.nav_bar {
+   grid-area: nav_bar; 
+   display: flex; /* Uses Flexbox for internal layout */
+   justify-content: right;   /* Right aligns the content */
+}
+.main {
+  grid-area: main; 
+}
+.main_img {
+   grid-area: main-img; 
+}
+.footer {
+   grid-area: footer;
+}
+
+#ticketPurchaseForm {
+    display: none;
+}
+
+.hamburger {
+  display: none;
+  color: #C4B5FD;
+  font-size: 22px;
+  padding: 4px;
+}
+
+iframe {
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+  border: none;
+}
+
+#map {
+  height: 500px;
+  width: 200%;
+}
+
+@media (max-width: 650px) {
+  /* Your CSS code for the mobile layout */
+  .nav_bar a:not(:first-child) {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav_bar.responsive a {
+    display: block;
+  }
+
+  .container {
+    grid-template-areas:
+    'header'
+    'nav_bar'
+    'main'
+    'main-img'
+    'footer';
+    grid-template-columns: 1fr;}
+
+  #logo {
+    width: 40%;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  ul {
+    font-size: 14px;
+  }
+  
+  li {
+    font-size: 14px;
+  }
+
+  .nav_bar {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  nav a {
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+
+  .cta {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  table {
+    font-size: 13px;
+    width: 100%;
+  }
+
+  th {
+    padding: 6px;
+  }
+
+  footer {
+    font-size: 13px;
+    padding: 12px 8px;
+  }
+
+  #longIntro {
+    display: none;
+  }
+
+  #readLess {
+    display: none;
+  }
+}
