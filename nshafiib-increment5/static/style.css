@@ -110,34 +110,6 @@ form * {
   text-align: center;
 }
 
-.container {
-  display: grid; /* Turns this div into a CSS Grid layout */
-  grid-template-areas:   /* Defines the layout structure */
-    'header header'
-    'nav_bar nav_bar'
-    'main main-img'
-    'footer footer';
-}
-
-/* Places each element into the correct area of the grid */
-.header {
-   grid-area: header; 
-}
-.nav_bar {
-   grid-area: nav_bar; 
-   display: flex; /* Uses Flexbox for internal layout */
-   justify-content: right;   /* Right aligns the content */
-}
-.main {
-  grid-area: main; 
-}
-.main_img {
-   grid-area: main-img; 
-}
-.footer {
-   grid-area: footer;
-}
-
 #ticketPurchaseForm {
     display: none;
 }
@@ -159,6 +131,32 @@ iframe {
 #map {
   height: 500px;
   width: 200%;
+}
+
+.container {
+  display: grid; /* Turns this div into a CSS Grid layout */
+  grid-template-areas:   /* Defines the layout structure */
+    'header header'
+    'nav_bar nav_bar'
+    'main main-img'
+    'footer footer';
+}
+
+/* Places each element into the correct area of the grid */
+.header {
+   grid-area: header; 
+}
+.nav_bar {
+   grid-area: nav_bar; 
+}
+.main {
+  grid-area: main; 
+}
+.main_img {
+   grid-area: main-img; 
+}
+.footer {
+   grid-area: footer;
 }
 
 @media (max-width: 650px) {
