@@ -1,65 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../static/script.js" defer></script>
-    <meta charset="UTF-8">
-    <meta name="author" content="Neha Shafi">
-    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
-    <meta name="description" content="MonoMuse website redesign project">
-    <title>MonoMuse</title>
-    <link rel="stylesheet" href="../static/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Quicksand:wght@300..700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  </head>
-<body onload="addYear()">
-  <div class="container">
-    <header class="header">     
-      <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
-      <h1>Exhibitions</h1>
-    </header>
-      <nav class="nav_bar">
-        <a href="../index.html">Home</a>
-        <a href="explore.html">Explore</a>
-        <a href="exhibitions.html">Exhibitions</a>
-        <a href="buytickets.html">Tickets</a>
-        <button class="hamburger" onclick="toggleNav()">&#9776;</button>
-      </nav>
-    <main class="main">
-    <h2>Exhibition 1: Digital Dreams: Art in the Age of Algorithms </h2>
-    <p>
-        This exhibition explores how artists are using algorithms, artificial intelligence, and generative tools to create new forms of digital expression. Through interactive displays and dynamic visuals, visitors can see how machines and human creativity work together to produce art that evolves in real time.
-    </p>
-    <h2>Exhibition 2: Code & Canvas: The Language of Creative Technology</h2>
-    <p>
-        Code & Canvas highlights the ways programming has become a medium for artistic creation. Featuring works by digital artists and designers, the exhibition showcases installations, projections, and interactive pieces that reveal how lines of code can transform into immersive visual experiences.
-    </p>
-    <h2>Gallery</h2>
-    <div class="slideshow">
-        <img class="slide" src="../static/gallery1.jpg" alt="Museum gallery 1">
-        <img class="slide" src="../static/gallery2.jpg" alt="Museum gallery 2">
-        <img class="slide" src="../static/gallery3.jpg" alt="Museum gallery 3">
-        <div class="slideshow-controls">
-            <button onclick="changeGallery(-1)">Previous</button>
-            <button onclick="changeGallery(1)">Next</button>
+    <head>
+        <!--jQuery v4.0.0-->
+        <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Javascript file for the website-->
+        <script src="../static/script.js" defer></script>
+        <meta charset="UTF-8">
+        <meta name="author" content="Neha Shafi">
+        <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+        <meta name="description" content="MonoMuse website redesign project">
+        <title>MonoMuse</title>
+        <!--Website styles-->
+        <link rel="stylesheet" href="../static/style.css">
+        <!--Google fonts imported: Michroma, Rajdhani, Quicksand-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Quicksand:wght@300..700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body onload="addYear()">
+        <div class="container">
+            <header class="header">
+                <!--MonoMuse logo generated with Google Gemini-->     
+                <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
+                <h1>Exhibitions</h1>
+            </header>
+            <!--Navigation bar at the top-->
+            <nav class="nav_bar">
+                <a href="../index.html">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="exhibitions.html">Exhibitions</a>
+                <a href="buytickets.html">Tickets</a>
+                <!--Hamburger menu for mobile-->
+                <button class="hamburger" onclick="toggleNav()">&#9776;</button>
+            </nav>
+            <main class="main">
+                <h2>Exhibition 1: Digital Dreams: Art in the Age of Algorithms </h2>
+                <p>
+                    This exhibition explores how artists are using algorithms, artificial intelligence, and generative tools to create new forms of digital expression. Through interactive displays and dynamic visuals, visitors can see how machines and human creativity work together to produce art that evolves in real time.
+                </p>
+                <h2>Exhibition 2: Code & Canvas: The Language of Creative Technology</h2>
+                <p>
+                    Code & Canvas highlights the ways programming has become a medium for artistic creation. Featuring works by digital artists and designers, the exhibition showcases installations, projections, and interactive pieces that reveal how lines of code can transform into immersive visual experiences.
+                </p>
+                <!--Image gallery slideshow-->
+                <h2>Gallery</h2>
+                <div class="slideshow">
+                    <!--Gallery images: Photos from unsplash.com-->
+                    <img class="slide" src="../static/gallery1.jpg" alt="Museum gallery 1">
+                    <img class="slide" src="../static/gallery2.jpg" alt="Museum gallery 2">
+                    <img class="slide" src="../static/gallery3.jpg" alt="Museum gallery 3">
+                    <div class="slideshow-controls">
+                        <button onclick="changeGallery(-1)">Previous</button>
+                        <button onclick="changeGallery(1)">Next</button>
+                    </div>
+                </div>
+                <!--Embedded YouTube video: MET Museum video-->
+                <h2>Featured Exhibit</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/MDA3AkOWPzs?si=RYJRyDKTeAEuYuYY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </main>
+            <figure class="main_figure"></figure>
+            <!--Copyright statement-->
+            <footer class="footer">
+                <p>&copy; MonoMuse. All rights reserved.</p>
+                <p id="copyYear"></p>
+            </footer>
         </div>
-    </div>
-    <h2>Featured Exhibit</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/MDA3AkOWPzs?si=RYJRyDKTeAEuYuYY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </main>
-    <figure class="main_figure"></figure>
-    <footer class="footer">
-      <p>&copy; MonoMuse. All rights reserved.</p>
-      <p id="copyYear"></p>
-    </footer>
-  </div>
-</body>
+    </body>
 </html>

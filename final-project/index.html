@@ -2,14 +2,18 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--jQuery v4.0.0-->
     <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <!--Javascript file for the website-->
     <script src="./static/script.js" defer></script>
     <meta charset="UTF-8">
     <meta name="author" content="Neha Shafi">
     <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
     <meta name="description" content="MonoMuse website redesign project">
     <title>MonoMuse</title>
+    <!--Website styles-->
     <link rel="stylesheet" href="./static/style.css">
+    <!--Google fonts imported: Michroma, Rajdhani, Quicksand-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
@@ -23,26 +27,32 @@
 <body onload="addYear()">
     <div class="container">
     <header class="header">
+        <!--MonoMuse logo generated with Google Gemini-->
         <img id="logo" src="./static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
         <h1>MonoMuse</h1>
     </header>        
+        <!--Navigation bar at the top-->
         <nav class="nav_bar">
             <a href="index.html">Home</a>
             <a href="views/explore.html">Explore</a>
             <a href="views/exhibitions.html">Exhibitions</a>
             <a href="views/buytickets.html">Tickets</a>
+            <!--Hamburger menu for mobile-->
             <button class="hamburger" onclick="toggleNav()">&#9776;</button>
         </nav>
+    <!--Main index page content-->
     <main class="main"> 
         <h2 id="greeting">Welcome to MonoMuse</h2>
         <p>MonoMuse is a modern museum focusing on the intersection between art, technology, and human imagination. Through a wide variety of immersive galleries and interactive displays, the museum showcases the ways digital innovation is transforming our creative processes and cultural interactions. Whether you are a curious newcomer or a returning member, our continuously improving collections provide a fresh perspective to view the impact of technology on our lives. We invite you to join us for a journey of discovery, featuring revolutionary exhibitions and hands-on activities designed to inspire creativity and imagination.</p>
         <a href="views/buytickets.html" class = "cta">Buy Tickets</a>
         <p id="shortIntro">MonoMuse offers something for everyone! Explore our exhibitions, events, etc.</p>
         <p id="longIntro">From digital art to interactive technology displays, MonoMuse is constantly updating. Our organizers work with artists and technology enthusiasts from around the world to bring you original experiences that stimulate your creativity and innovation.</p>
+        <!--Read more / read less toggle-->
         <span id="readMore">Read More</span>
         <span id="readLess">Read Less</span>    
     </main>
     <figure class="main_figure"></figure>
+    <!--Copyright statement-->
     <footer class="footer">
         <p>&copy; MonoMuse. All rights reserved.</p>
         <p id="copyYear"></p>

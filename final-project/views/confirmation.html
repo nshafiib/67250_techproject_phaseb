@@ -1,62 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
-    <script src="../static/script.js" defer></script>
-    <meta charset="UTF-8">
-    <meta name="author" content="Neha Shafi">
-    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
-    <meta name="description" content="MonoMuse website redesign project">
-    <title>Purchase Confirmation</title>
-    <link rel="stylesheet" href="../static/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Quicksand:wght@300..700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var params = new URLSearchParams(window.location.search);
-        document.getElementById('confType').innerHTML = params.get('type');
-        document.getElementById('confTickets').innerHTML = params.get('tickets');
-        document.getElementById('confDate').innerHTML = params.get('date');
-        document.getElementById('confTotal').innerHTML = '$' + params.get('total');
-    });
-</script>
-<body onload="addYear()">
-    <div class="container">
-    <header class="header">     
-        <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
-        <h1>MonoMuse</h1>
-    </header>        
-        <nav class="nav_bar">
-            <a href="../index.html">Home</a>
-            <a href="explore.html">Explore</a>
-            <a href="exhibitions.html">Exhibitions</a>
-            <a href="buytickets.html">Tickets</a>
-            <button class="hamburger" onclick="toggleNav()">&#9776;</button>
-        </nav>
-    <main class="main"> 
-        <h2>Thank you for your order!</h2>
-        <p>Your ticket purchase has been confirmed. We look forward to your visit to MonoMuse!</p>
-        <h3>Order</h3>
-        <p>Ticket Type: <span id="confType"></span></p>
-        <p>Number of Tickets: <span id="confTickets"></span></p>
-        <p>Visit Date: <span id="confDate"></span></p>
-        <p>Total Cost: <span id="confTotal"></span></p>
-        <a href="buytickets.html" class="cta">Buy More</a> 
-    </main>
-    <figure class="main_figure"></figure>
-    <footer class="footer">
-        <p>&copy; MonoMuse. All rights reserved.</p>
-        <p id="copyYear"></p>
-    </footer>
-    </div>
-</body>
+    <head>
+        <!--jQuery v4.0.0-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+        <!--Javascript file for the website-->
+        <script src="../static/script.js" defer></script>
+        <meta charset="UTF-8">
+        <meta name="author" content="Neha Shafi">
+        <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+        <meta name="description" content="MonoMuse website redesign project">
+        <title>Purchase Confirmation</title>
+        <!--Website styles-->
+        <link rel="stylesheet" href="../static/style.css">
+        <!--Google fonts imported: Michroma, Rajdhani, Quicksand-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Quicksand:wght@300..700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+    <!-- Read URLs and display order summary -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var params = new URLSearchParams(window.location.search);
+            document.getElementById('confType').innerHTML = params.get('type');
+            document.getElementById('confTickets').innerHTML = params.get('tickets');
+            document.getElementById('confDate').innerHTML = params.get('date');
+            document.getElementById('confTotal').innerHTML = '$' + params.get('total');
+        });
+    </script>
+    <body onload="addYear()">
+        <div class="container">
+            <header class="header">     
+                <!--MonoMuse logo generated with Google Gemini-->
+                <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
+                <h1>MonoMuse</h1>
+            </header>        
+            <!--Navigation bar at the top-->
+            <nav class="nav_bar">
+                <a href="../index.html">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="exhibitions.html">Exhibitions</a>
+                <a href="buytickets.html">Tickets</a>
+                <!--Hamburger menu for mobile-->
+                <button class="hamburger" onclick="toggleNav()">&#9776;</button>
+            </nav>
+            <main class="main"> 
+                <h2>Thank you for your order!</h2>
+                <p>Your ticket purchase has been confirmed. We look forward to your visit to MonoMuse!</p>
+                <h3>Order</h3>
+                <p>Ticket Type: <span id="confType"></span></p>
+                <p>Number of Tickets: <span id="confTickets"></span></p>
+                <p>Visit Date: <span id="confDate"></span></p>
+                <p>Total Cost: <span id="confTotal"></span></p>
+                <a href="buytickets.html" class="cta">Buy More</a> 
+            </main>
+            <figure class="main_figure"></figure>
+            <!--Copyright statement-->
+            <footer class="footer">
+                <p>&copy; MonoMuse. All rights reserved.</p>
+                <p id="copyYear"></p>
+            </footer>
+        </div>
+    </body>
 </html>
