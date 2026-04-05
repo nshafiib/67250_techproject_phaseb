@@ -1,127 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <script src="../static/script.js" defer></script>
-    <meta charset="UTF-8">
-    <meta name="author" content="Neha Shafi">
-    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
-    <meta name="description" content="MonoMuse website redesign project">
-    <title>MonoMuse</title>
-    <link rel="stylesheet" href="../static/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Quicksand:wght@300..700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  </head>
-<body onload="addYear()">
-  <div class="container">
-  <header class="header">
-    <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
-    <h1>Tickets</h1>
-  </header>
-  <nav class="nav_bar">
-      <a href="../index.html">Home</a>
-      <a href="explore.html">Explore</a>
-      <a href="exhibitions.html">Exhibitions</a>
-      <a id="navselected" href="tickets.html">Tickets</a>
-      <a href="checkout.html">Checkout</a>
-  </nav>
-  <main class="main">
-  <h2>Buy Tickets Now!</h2>
- 
-  <div class="main">
-    <table>
-
-      <thead>
-        <tr>
-          <th>Ticket Type</th>
-          <th>Description</th>
-          <th>$Price$</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>Adult</td>
-          <td>General admission for ages 18 and over. Under 18 free of charge.</td>
-          <td>$18</td>
-        </tr>
-
-        <tr>
-          <td>Student</td>
-          <td>Student ID required</td>
-          <td>$10</td>
-        </tr>
-
-        <tr>
-          <td>Member</td>
-          <td>Member ID required</td>
-          <td>$15</td>
-        </tr>
-      </tbody>
-
-    </table>
-  </div>
-    <h2>Available Dates</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Time</th>
-                <th>Availability</th>
-                <th>Purchase</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>April 1, 2026</td>
-                <td>10:00 AM</td>
-                <td>Available</td>
-                <td><button onclick="showForm()">Buy Now</button></td>
-            </tr>
-            <tr>
-                <td>April 2, 2026</td>
-                <td>12:00 PM</td>
-                <td>Available</td>
-                <td><button onclick="showForm()">Buy Now</button></td>
-            </tr>
-            <tr>
-                <td>April 3, 2026</td>
-                <td>11:00 AM</td>
-                <td>Available</td>
-                <td><button onclick="showForm()">Buy Now</button></td>
-            </tr>
-            <tr>
-                <td>April 4, 2026</td>
-                <td>1:00 PM</td>
-                <td>Available</td>
-                <td><button onclick="showForm()">Buy Now</button></td>
-            </tr>
-        </tbody>
-    </table>
-
-        <div id="ticketPurchaseForm">
-            <h2>Purchase Tickets</h2>
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-            <label for="tickets">Number of Tickets:</label><br>
-            <input type="number" id="tickets" name="tickets" required><br><br>
-            <label for="date">Selected Date:</label><br>
-            <input type="text" id="date" name="date"><br><br>
-            <button onclick="alert('Redirecting to payment system.')">Submit</button>
+    <head>
+        <script src="../static/script.js" defer></script>
+        <meta charset="UTF-8">
+        <meta name="author" content="Neha Shafi">
+        <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+        <meta name="description" content="MonoMuse website redesign project">
+        <title>MonoMuse</title>
+        <link rel="stylesheet" href="../static/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Quicksand:wght@300..700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body onload="addYear()">
+        <div class="container">
+            <header class="header">
+                <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
+                <h1>Tickets</h1>
+            </header>
+            <nav class="nav_bar">
+                <a href="../index.html">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="exhibitions.html">Exhibitions</a>
+                <a href="buytickets.html">Tickets</a>
+                <a href="checkout.html">Checkout</a>
+            </nav>
+            <main class="main">
+                <h2>Buy Tickets Now!</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ticket Type</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Adult</td>
+                            <td>General admission for ages 18 and over. Under 18 free of charge.</td>
+                            <td>$18</td>
+                        </tr>
+                        <tr>
+                            <td>Student</td>
+                            <td>Student ID required</td>
+                            <td>$10</td>
+                        </tr>
+                        <tr>
+                            <td>Member</td>
+                            <td>Member ID required</td>
+                            <td>$15</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>Available Dates</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Availability</th>
+                            <th>Purchase</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>April 1, 2026</td>
+                            <td>10:00 AM</td>
+                            <td>Available</td>
+                            <td><button onclick="showForm()">Buy Now</button></td>
+                        </tr>
+                        <tr>
+                            <td>April 2, 2026</td>
+                            <td>12:00 PM</td>
+                            <td>Available</td>
+                            <td><button onclick="showForm()">Buy Now</button></td>
+                        </tr>
+                        <tr>
+                            <td>April 3, 2026</td>
+                            <td>11:00 AM</td>
+                            <td>Available</td>
+                            <td><button onclick="showForm()">Buy Now</button></td>
+                        </tr>
+                        <tr>
+                            <td>April 4, 2026</td>
+                            <td>1:00 PM</td>
+                            <td>Available</td>
+                            <td><button onclick="showForm()">Buy Now</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="ticketPurchaseForm">
+                    <h2>Purchase Tickets</h2>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+                    <label for="tickets">Number of Tickets:</label><br>
+                    <input type="number" id="tickets" name="tickets" required><br><br>
+                    <label for="date">Selected Date:</label><br>
+                    <input type="text" id="date" name="date"><br><br>
+                    <button onclick="alert('Redirecting to payment system.')">Submit</button>
+                </div>
+            </main>
+            <figure class="main_figure"></figure>
+            <footer class="footer">
+                <p>&copy; MonoMuse. All rights reserved.</p>
+                <p id="copyYear"></p>
+            </footer>
         </div>
-    </main>
-  <figure class="main_figure"></figure>
-  <footer class="footer">
-    <p>&copy; MonoMuse. All rights reserved.</p>
-    <p id="copyYear"></p>
-  </footer>
-</body>
+    </body>
 </html>
