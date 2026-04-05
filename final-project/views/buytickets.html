@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../static/script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="author" content="Neha Shafi">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <title>MonoMuse</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Quicksand:wght@300..700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body onload="addYear()">
+  <div class="container">
+    <header class="header">
+        <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
+        <h1>Tickets</h1>
+    </header>
+    <nav class="nav_bar">
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a href="buytickets.html">Tickets</a>
+        <button class="hamburger" onclick="toggleNav()">&#9776;</button>
+    </nav>
+    <main class="main">
+        <h2>Buy Tickets Now!</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ticket Type</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Adult</td>
+                    <td>General admission for ages 18 and over. Under 18 free of charge.</td>
+                    <td>$18</td>
+                </tr>
+                <tr>
+                    <td>Student</td>
+                    <td>Student ID required</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Member</td>
+                    <td>Member ID required</td>
+                    <td>$15</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Available Dates</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Availability</th>
+                    <th>Purchase</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>April 1, 2026</td>
+                    <td>10:00 AM</td>
+                    <td>Available</td>
+                    <td><button onclick="showForm()">Buy Now</button></td>
+                </tr>
+                <tr>
+                    <td>April 2, 2026</td>
+                    <td>12:00 PM</td>
+                    <td>Available</td>
+                    <td><button onclick="showForm()">Buy Now</button></td>
+                </tr>
+                <tr>
+                    <td>April 3, 2026</td>
+                    <td>11:00 AM</td>
+                    <td>Available</td>
+                    <td><button onclick="showForm()">Buy Now</button></td>
+                </tr>
+                <tr>
+                    <td>April 4, 2026</td>
+                    <td>1:00 PM</td>
+                    <td>Available</td>
+                    <td><button onclick="showForm()">Buy Now</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="ticketPurchaseForm">
+            <h2>Purchase Tickets</h2>
+            <div class="form-group">
+                <label for="visitingDate">Visit Date</label>
+                <input type="date" id="visitingDate" name="visitingDate">
+                <span class="error" id="visitingDateError">Please select a visit date.</span>
+            </div>
+
+            <div class="form-group">
+                <label for="ticketType">Ticket Type</label>
+                <select id="ticketType" name="ticketType">
+                    <option value="">Select</option>
+                    <option value="adult">Adult</option>
+                    <option value="student">Student</option>
+                    <option value="member">Member</option>
+                </select>
+                <span class="error" id="ticketTypeError">Please select the type of ticket.</span>
+            </div>
+
+            <div class="form-group">
+                <label for="amount">Number of Tickets (1-10)</label>
+                <input type="number" id="amount" name="amount" min="1" max="10">
+                <span class="error" id="amountError">Please enter a quantity between 1 and 10.</span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+                <span class="error" id="emailError">Please enter a valid email address.</span>
+            </div>
+
+            <div class="form-group">
+                <label for="zipCode">Zip Code (optional)</label>
+                <input type="text" id="zipCode" name="zipCode" maxlength="5" pattern="\d{5}">
+                <span class="error" id="zipCodeError">Zip code must be 5 digits.</span>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="mailingList" name="mailingList">Join our mailing list!
+                </label>
+            </div>
+
+
+            <div class="form-group">
+                <label>Total Price</label>
+                <span id="totalPrice">$0</span>
+            </div>
+
+            <button id="placeOrderButton" onclick="placeOrder()">Place Order</button>
+    </div>
+
+    </main>
+    <figure class="main_figure"></figure>
+    <footer class="footer">
+        <p>&copy; MonoMuse. All rights reserved.</p>
+        <p id="copyYear"></p>
+    </footer>
+  </div>
+</body>
+</html>
