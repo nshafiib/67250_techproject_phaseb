@@ -1,77 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <script src="../static/script.js" defer></script>
-    <meta charset="UTF-8">
-    <meta name="author" content="Neha Shafi">
-    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
-    <meta name="description" content="MonoMuse website redesign project">
-    <title>MonoMuse</title>
-    <link rel="stylesheet" href="../static/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Quicksand:wght@300..700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  </head>
-<body onload="addYear()">
-  <header>
-    <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
+    <head>
+        <script src="../static/script.js" defer></script>
+        <meta charset="UTF-8">
+        <meta name="author" content="Neha Shafi">
+        <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+        <meta name="description" content="MonoMuse website redesign project">
+        <title>MonoMuse</title>
+        <link rel="stylesheet" href="../static/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Quicksand:wght@300..700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body onload="addYear()">
+        <header>
+            <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
+            <h1>Tickets</h1>
+            <nav>
+                <a href="../index.html">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="exhibitions.html">Exhibitions</a>
+                <a id="navselected" href="tickets.html">Tickets</a>
+                <a href="checkout.html">Checkout</a>
+            </nav>
+            <h2>Buy Tickets Now!</h2>
+        </header>
+        <div class="main">
+            <table>
+                <thead>
+                    <tr>
+                    <th>Ticket Type</th>
+                    <th>Description</th>
+                    <th>$Price$</th>
+                    </tr>
+                </thead>
 
-    <h1>Tickets</h1>
+                <tbody>
+                    <tr>
+                    <td>Adult</td>
+                    <td>General admission for ages 18 and over. Under 18 free of charge.</td>
+                    <td>$18</td>
+                    </tr>
 
-  <nav>
-      <a href="../index.html">Home</a>
-      <a href="explore.html">Explore</a>
-      <a href="exhibitions.html">Exhibitions</a>
-      <a id="navselected" href="tickets.html">Tickets</a>
-      <a href="checkout.html">Checkout</a>
-  </nav>
-  <h2>Buy Tickets Now!</h2>
-  </header>
- 
-  <div class="main">
-    <table>
+                    <tr>
+                    <td>Student</td>
+                    <td>Student ID required</td>
+                    <td>$10</td>
+                    </tr>
 
-      <thead>
-        <tr>
-          <th>Ticket Type</th>
-          <th>Description</th>
-          <th>$Price$</th>
-        </tr>
-      </thead>
+                    <tr>
+                    <td>Member</td>
+                    <td>Member ID required</td>
+                    <td>$15</td>
+                    </tr>
+                </tbody>
 
-      <tbody>
-        <tr>
-          <td>Adult</td>
-          <td>General admission for ages 18 and over. Under 18 free of charge.</td>
-          <td>$18</td>
-        </tr>
-
-        <tr>
-          <td>Student</td>
-          <td>Student ID required</td>
-          <td>$10</td>
-        </tr>
-
-        <tr>
-          <td>Member</td>
-          <td>Member ID required</td>
-          <td>$15</td>
-        </tr>
-      </tbody>
-
-    </table>
-  </div>
- 
-  <footer>
-    <p>&copy; MonoMuse. All rights reserved.</p>
-    <p id="copyYear"></p>
-  </footer>
- 
-</body>
+            </table>
+        </div>
+        
+        <footer>
+            <p>&copy; MonoMuse. All rights reserved.</p>
+            <p id="copyYear"></p>
+        </footer>
+    </body>
 </html>
